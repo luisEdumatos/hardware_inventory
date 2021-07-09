@@ -1,2 +1,2 @@
-# hardware_inventory
-Controle de máquinas dos clientes
+# Inventário de Hardware
+Sistema para controle de máquinas dos clientes
