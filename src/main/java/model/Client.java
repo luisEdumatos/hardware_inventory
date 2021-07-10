@@ -10,8 +10,16 @@ public class Client {
     private String address;
     private List<Hardware> equipment = new ArrayList<>();
 
+    public Client() { }
+
     public Client(int id, String name, String cnpj, String address) {
         this.id = id;
+        this.name = name;
+        this.cnpj = cnpj;
+        this.address = address;
+    }
+
+    public Client(String name, String cnpj, String address) {
         this.name = name;
         this.cnpj = cnpj;
         this.address = address;
@@ -33,6 +41,10 @@ public class Client {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

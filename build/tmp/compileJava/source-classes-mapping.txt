@@ -1,4 +1,10 @@
-model/Client.java
- model.Client
 model/Hardware.java
  model.Hardware
+jdbc/ConnectionJDBC.java
+ jdbc.ConnectionJDBC
+controller/QueriesClient.java
+ controller.QueriesClient
+service/ClientDAO.java
+ service.ClientDAO
+model/Client.java
+ model.Client
