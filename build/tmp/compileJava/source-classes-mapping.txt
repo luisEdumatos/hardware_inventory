@@ -4,7 +4,7 @@ jdbc/ConnectionJDBC.java
  jdbc.ConnectionJDBC
 model/Client.java
  model.Client
-service/ClientDAO.java
- service.ClientDAO
 controller/QueriesClient.java
  controller.QueriesClient
+service/ClientDAO.java
+ service.ClientDAO

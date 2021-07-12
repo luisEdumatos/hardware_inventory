@@ -1,5 +1,6 @@
 package controller;
 
+import enums.DeviceType;
 import model.Client;
 import service.ClientDAO;
 
@@ -33,5 +34,6 @@ public class QueriesClient {
     public void updateClient(Client client) {
         clientDAO.update(client);
     }
+
 }
 

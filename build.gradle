@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
