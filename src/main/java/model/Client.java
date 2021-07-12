@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import javax.persistence.*;
 
 @Entity
@@ -12,17 +11,17 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     private String cnpj;
 
-    @Column
+    @Column(nullable = false)
     private String address;
 
     @OneToMany (
-            mappedBy = "id_client",
+            mappedBy = "client",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

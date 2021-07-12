@@ -11,47 +11,47 @@ public class Hardware {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne(fetch = FetchType.EAGER)
-    private int id_client;
-    @Column
+    private Client client;
+    @Column(nullable = false)
     private String deviceLocalization;
-    @Column
+    @Column(nullable = false)
     private String deviceOwnerUserName;
-    @Column
+    @Column(nullable = false)
     private String deviceTag;
-    @Column
+    @Column(nullable = false)
     private DeviceType deviceType;
-    @Column
+    @Column(nullable = false)
     private String deviceBrand;
-    @Column
+    @Column(nullable = false)
     private String deviceModel;
-    @Column
+    @Column(nullable = false)
     private String deviceSO;
-    @Column
+    @Column(nullable = false)
     private boolean deviceSOLicensed;
-    @Column
+    @Column(nullable = false)
     private boolean deviceOfficeLicensed;
-    @Column
+    @Column(nullable = false)
     private boolean deviceAntivirusLicensed;
-    @Column
+    @Column(nullable = false)
     private String deviceProcessor;
-    @Column
+    @Column(nullable = false)
     private String deviceProcessorGeneration;
-    @Column
+    @Column(nullable = false)
     private String deviceProcessorGHZ;
-    @Column
+    @Column(nullable = false)
     private String deviceRAM;
-    @Column
+    @Column(nullable = false)
     private String deviceHD;
-    @Column
+    @Column(nullable = false)
     private DeviceStatusCondition deviceStatusCondition;
-    @Column
+    @Column(nullable = false)
     private String deviceSwapPrediction;
 
     public Hardware() { }
 
-    public Hardware(int id, int id_client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
+    public Hardware(int id, Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
         this.id = id;
-        this.id_client = id_client;
+        this.client = client;
         this.deviceLocalization = deviceLocalization;
         this.deviceOwnerUserName = deviceOwnerUserName;
         this.deviceTag = deviceTag;
@@ -71,8 +71,8 @@ public class Hardware {
         this.deviceSwapPrediction = deviceSwapPrediction;
     }
 
-    public Hardware(int id_client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
-        this.id_client = id_client;
+    public Hardware(Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
+        this.client = client;
         this.deviceLocalization = deviceLocalization;
         this.deviceOwnerUserName = deviceOwnerUserName;
         this.deviceTag = deviceTag;
@@ -98,14 +98,6 @@ public class Hardware {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getId_client() {
-        return id_client;
-    }
-
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
     }
 
     public String getDeviceLocalization() {

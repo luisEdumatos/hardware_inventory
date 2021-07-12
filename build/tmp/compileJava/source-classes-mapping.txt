@@ -2,15 +2,15 @@ enums/DeviceStatusCondition.java
  enums.DeviceStatusCondition
 jdbc/ConnectionJDBC.java
  jdbc.ConnectionJDBC
-connectionJPA/ConnectionExample.java
- connectionJPA.ConnectionExample
+enums/DeviceType.java
+ enums.DeviceType
+model/Hardware.java
+ model.Hardware
 controller/QueriesClient.java
  controller.QueriesClient
 service/ClientDAO.java
  service.ClientDAO
-enums/DeviceType.java
- enums.DeviceType
 model/Client.java
  model.Client
-model/Hardware.java
- model.Hardware
+connectionJPA/ConnectionExample.java
+ connectionJPA.ConnectionExample
