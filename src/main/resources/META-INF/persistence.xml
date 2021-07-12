@@ -7,11 +7,11 @@
     <!-- Unidade de persistencia da parte 1 do curso (Somente JPA)-->
     <persistence-unit name="initial-JPA">
 
-        <description> Unidade de persistencia da parte 1 do tutorial basico de JPA da Digital Innovation One sem implementacoes (Somente JPA) </description>
+        <description> Unidade de persistencia</description>
 
         <!-- Classes (entidades) que serao mapeadas -->
         <class>classes.Client</class>
-        <class>classes.Estado</class>
+        <class>classes.Hardware</class>
 
         <!-- Configuracoes de conexao ao banco de dados -->
         <properties>
@@ -19,10 +19,11 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/hardware_inventory" />
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="123456" />
-            <property name="javax.persistence.jdbc.driver" value="com.postgresql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.jdbc.Driver" />
         </properties>
 
     </persistence-unit>
 
     <!-- ========================================================================================================================== -->
+
 </persistence>

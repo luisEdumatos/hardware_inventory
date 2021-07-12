@@ -2,13 +2,31 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import javax.persistence.*;
 
+@Entity
 public class Client {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column
     private String name;
+
+    @Column
     private String cnpj;
+
+    @Column
     private String address;
-    private List<Hardware> equipment = new ArrayList<>();
+
+    @OneToMany (
+            mappedBy = "id_client",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private final List<Hardware> equipment = new ArrayList<>();
 
     public Client() { }
 

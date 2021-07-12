@@ -1,10 +1,16 @@
-model/Hardware.java
- model.Hardware
+enums/DeviceStatusCondition.java
+ enums.DeviceStatusCondition
 jdbc/ConnectionJDBC.java
  jdbc.ConnectionJDBC
-model/Client.java
- model.Client
+connectionJPA/ConnectionExample.java
+ connectionJPA.ConnectionExample
 controller/QueriesClient.java
  controller.QueriesClient
 service/ClientDAO.java
  service.ClientDAO
+enums/DeviceType.java
+ enums.DeviceType
+model/Client.java
+ model.Client
+model/Hardware.java
+ model.Hardware

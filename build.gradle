@@ -19,7 +19,7 @@ dependencies {
 
 checkstyle {
     toolVersion = '8.44'
-    showViolations = true
+    showViolations = false
     configFile = file("config/checkstyle/checkstyle.xml")
 }
 

@@ -3,25 +3,48 @@ package model;
 import enums.DeviceStatusCondition;
 import enums.DeviceType;
 
+import javax.persistence.*;
+
+@Entity
 public class Hardware {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @ManyToOne(fetch = FetchType.EAGER)
     private int id_client;
+    @Column
     private String deviceLocalization;
+    @Column
     private String deviceOwnerUserName;
+    @Column
     private String deviceTag;
+    @Column
     private DeviceType deviceType;
+    @Column
     private String deviceBrand;
+    @Column
     private String deviceModel;
+    @Column
     private String deviceSO;
+    @Column
     private boolean deviceSOLicensed;
+    @Column
     private boolean deviceOfficeLicensed;
+    @Column
     private boolean deviceAntivirusLicensed;
+    @Column
     private String deviceProcessor;
+    @Column
     private String deviceProcessorGeneration;
+    @Column
     private String deviceProcessorGHZ;
+    @Column
     private String deviceRAM;
+    @Column
     private String deviceHD;
+    @Column
     private DeviceStatusCondition deviceStatusCondition;
+    @Column
     private String deviceSwapPrediction;
 
     public Hardware() { }
