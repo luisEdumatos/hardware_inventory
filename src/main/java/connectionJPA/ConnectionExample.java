@@ -4,6 +4,7 @@ import enums.DeviceStatusCondition;
 import enums.DeviceType;
 import model.Client;
 import model.Hardware;
+import service.ClientDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -34,9 +35,20 @@ public class ConnectionExample {
   //      client = entityManager.find(Client.class, 1);
   //      System.out.println(client);
 */
-        Client client = new Client("Teco Ti", "112.154.568/0001-56", "Avenida Rui Barbosa");
-        String jpql = "insert into client (name, cnpj, address) values (client.name, client.cnpj, client.address)";
-        entityManager.createQuery(jpql, Client.class).getSingleResult();
+        Client client;
+        client = entityManager.find(Client.class, 1);
+       // entityManager.getTransaction().begin();
+
+        client.setAddress("Rua Zoroastro Henrique Amorim");
+        client.setName("Signify");
+
+        ClientDAO clientDAO = new ClientDAO();
+        clientDAO.updateClient(client);
+
+       // entityManager.getTransaction().commit();
+
+        //
+        //
 
         /*
 

@@ -5,7 +5,6 @@ import model.Client;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.io.IOException;
 import java.util.List;
 
 public class ClientDAO {
@@ -32,7 +31,7 @@ public class ClientDAO {
         return client;
     }
 
-    //Inserir Cliente
+    //InsereCliente
     public void createClient(Client client) {
         try {
             entityManager.getTransaction().begin();
@@ -44,7 +43,6 @@ public class ClientDAO {
     }
 
     //Delata Cliente no banco
-    //public void deleteClient(int id)
     public void deleteClient(int id) {
         try {
             entityManager.getTransaction().begin();
@@ -57,7 +55,17 @@ public class ClientDAO {
     }
 
     //Atualiza Cliente no banco
-    //public void update (Client client)
+    public void updateClient(Client client) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(client).setName(client.getName());
+            entityManager.merge(client).setCnpj(client.getCnpj());
+            entityManager.merge(client).setAddress(client.getAddress());
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+        }
+    }
 
 }
 
