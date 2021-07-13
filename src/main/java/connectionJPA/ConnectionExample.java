@@ -34,7 +34,16 @@ public class ConnectionExample {
   //      client = entityManager.find(Client.class, 1);
   //      System.out.println(client);
 */
+        Client client = new Client("Teco Ti", "112.154.568/0001-56", "Avenida Rui Barbosa");
+        String jpql = "insert into client (name, cnpj, address) values (client.name, client.cnpj, client.address)";
+        entityManager.createQuery(jpql, Client.class).getSingleResult();
 
+        /*
+
+        entityManager.getTransaction().begin();
+        Hardware hard = entityManager.find(Hardware.class, 7);
+        entityManager.remove(hard);
+        entityManager.getTransaction().commit();
 
         //Utilizando JPQL
         String name = "Teste";
@@ -64,8 +73,9 @@ public class ConnectionExample {
 
         hards.forEach(Hardware -> System.out.println(Hardware));
 
-        entityManager.close();
-        entityManagerFactory.close();
 
+*/
+  //      entityManager.close();
+  //      entityManagerFactory.close();
     }
 }
