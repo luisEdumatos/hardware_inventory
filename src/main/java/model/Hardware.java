@@ -19,7 +19,7 @@ public class Hardware {
     @Column(nullable = false)
     private String deviceTag;
     @Column(nullable = false)
-    private DeviceType deviceType;
+    private String deviceType;
     @Column(nullable = false)
     private String deviceBrand;
     @Column(nullable = false)
@@ -43,13 +43,13 @@ public class Hardware {
     @Column(nullable = false)
     private String deviceHD;
     @Column(nullable = false)
-    private DeviceStatusCondition deviceStatusCondition;
+    private String deviceStatusCondition;
     @Column(nullable = false)
     private String deviceSwapPrediction;
 
     public Hardware() { }
 
-    public Hardware(int id, Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
+    public Hardware(int id, Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, String deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, String deviceStatusCondition, String deviceSwapPrediction) {
         this.id = id;
         this.client = client;
         this.deviceLocalization = deviceLocalization;
@@ -71,7 +71,7 @@ public class Hardware {
         this.deviceSwapPrediction = deviceSwapPrediction;
     }
 
-    public Hardware(Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, DeviceType deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, DeviceStatusCondition deviceStatusCondition, String deviceSwapPrediction) {
+    public Hardware(Client client, String deviceLocalization, String deviceOwnerUserName, String deviceTag, String deviceType, String deviceBrand, String deviceModel, String deviceSO, boolean deviceSOLicensed, boolean deviceOfficeLicensed, boolean deviceAntivirusLicensed, String deviceProcessor, String deviceProcessorGeneration, String deviceProcessorGHZ, String deviceRAM, String deviceHD, String deviceStatusCondition, String deviceSwapPrediction) {
         this.client = client;
         this.deviceLocalization = deviceLocalization;
         this.deviceOwnerUserName = deviceOwnerUserName;
@@ -124,12 +124,12 @@ public class Hardware {
         this.deviceTag = deviceTag;
     }
 
-    public DeviceType getDeviceType() {
+    public String getDeviceType() {
         return deviceType;
     }
 
     public void setDeviceType(DeviceType deviceType) {
-        this.deviceType = deviceType;
+        this.deviceType = deviceType.toString();
     }
 
     public String getDeviceBrand() {
@@ -220,12 +220,12 @@ public class Hardware {
         this.deviceHD = deviceHD;
     }
 
-    public DeviceStatusCondition getDeviceStatusCondition() {
+    public String getDeviceStatusCondition() {
         return deviceStatusCondition;
     }
 
     public void setDeviceStatusCondition(DeviceStatusCondition deviceStatusCondition) {
-        this.deviceStatusCondition = deviceStatusCondition;
+        this.deviceStatusCondition = deviceStatusCondition.toString();
     }
 
     public String getDeviceSwapPrediction() {
