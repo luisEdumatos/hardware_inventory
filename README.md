@@ -5,4 +5,6 @@ O sistema proporcionará maior organização para a equipe de gestão de ativos,
 
 Até o momento, o backend do sistema foi implementado utilizando-se Java e banco de dados PostgreSQL. As buscas e manipulações no banco são realizadas utilizando JPA e JPQL.
 
-O objetivo é continuar construindo o projeto e, nas proximas etapas, será incluido no backend a utilização do Spring e o frontend será construido com Angular.
+O objetivo é continuar construindo o projeto e, nas proximas etapas, será incluido no backend a utilização do Spring e o frontend será construido com Angular. 
+
+A segunda etapa do projeto, com a construção do backend utilizando SpringBoot, será adicionada em outro repositório que será criado em breve.
